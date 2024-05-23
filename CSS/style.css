@@ -3,7 +3,16 @@ body{
 }
 h1{
     color: brown;
+    text-align:center;
+    text-transform: uppercase;
+    text-decoration: solid;
+    text-decoration: underline;
+    background-color: black;
 }
 h3{
     color: brown;
+}
+img{
+    height: 500px;
+    width: 300px;
 }
