@@ -5,7 +5,33 @@ margin:0;
 *{
     box-sizing: border-box;
 }
-.topnav{
+
+ .topnav{
+    background-color: #373737;
+    overflow: hidden;
+}
+
+.topnav a{
+    color:  rgb(238, 238, 238);
+    float: left;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    padding: 14px 16px;
+}
+
+.topnav a:hover{
+    background-color: rgb(238, 238, 238);
+    color: #373737;
+    text-decoration: none;
+}
+
+.topnav-right{
+    float: right;
+}
+
+ 
+/* .topnav{
   background-color: white;  
  overflow:hidden;
 }
@@ -24,7 +50,7 @@ margin:0;
 }
 .topnav-right{
     float:right;
-}
+} */
 .header{
     padding:20px;
     text-align:center;
@@ -116,4 +142,12 @@ h3{
     }
     img{
         padding-right: 15px;
+    }
+    .index_img{
+        width:200px;
+        padding: 10px 10px;
+    }
+    .about_img{
+        width:400px;
+        padding:20px 10px;
     }
