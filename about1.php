@@ -1,28 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-    
-    <h3 style="text-transform: uppercase;
-    text-align: center;
-    "
-    >Automation of technological and business-processe</h3>
-   
+<?php require_once("templates1/header1.php");?>
+<?php include_once("templates1/nav1.php");?>
+<?php require_once("includes1/db_connect1.php");?>
+<div class="header">
+            <h1>Tesla.Inc.</h1>
+        </div>
+        <div class="row">
+            <div class="content">
+            <h1>About Us.</h1>
+            <h2>Founding (2003–2004)</h2>
+           <p>The company was incorporated as Tesla Motors, Inc. on July 1, 2003, by Martin Eberhard and Marc Tarpenning.[10]</p>
+           <p>[11] They served as chief executive officer and chief financial officer, respectively.</p>
+           <p>[12] Eberhard said that he wanted to build "a car manufacturer that is also a technology company", </p>
+            <p>with its core technologies as "the battery, the computer software, and the proprietary motor".[13]</p>
+            </div>
+<<img class="index2_img" src="image/Tesla1.jpg" style="float: right;">
 
-    <p>  Nowadays, in the era of supersonic speeds and high technologies, when (and it's not a secret) people 
-       managed by their reckless and short-sighted activities to  bring their life  environment  to  a 
-       critical state, the issues related to environmental protection and careful attitude to the use of 
-       natural resources ceased to be simply "buzzwords" used to keep up a conversation. 
-       They have become government policy issues and our survival and further existence of the human race
-       on the Planet directly depend on their competent and successful solution</p>
-
-       <a href="index.html">previous page</a> <br><br>
-       <a href="Page 3.html">next page</a>
-       <h2>Page 2</h2>
-</body>
-</html>
+</div>      
+<?php include_once("templates1/footer1.php");?>
