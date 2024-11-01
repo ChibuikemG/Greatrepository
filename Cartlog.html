@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Logging System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .cart {
+            margin: 20px 0;
+        }
+        .log {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        button {
+            padding: 10px 15px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Shopping Cart</h1>
+
+    <div class="cart">
+        <button onclick="addItem('Apple')">Add Apple</button>
+        <button onclick="addItem('Banana')">Add Banana</button>
+        <button onclick="removeItem('Apple')">Remove Apple</button>
+        <button onclick="removeItem('Banana')">Remove Banana</button>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="viewCart()">View Cart</button>
+    </div>
+
+    <h2>Log:</h2>
+    <div id="logOutput" class="log"></div>
+</div>
+
+<script>
+    // Initialize cart as an empty array
+    let cart = [];
+
+    // Function to log messages to the web page
+    function logMessage(message) {
+        const logOutput = document.getElementById('logOutput');
+        const timestamp = new Date().toLocaleString();
+        const logEntry = `${timestamp} - ${message}`;
+        
+        // Log to console
+        console.log(logEntry);
+        
+        // Log to the web page
+        logOutput.innerHTML += `<p>${logEntry}</p>`;
+    }
+
+    // Function to add an item to the cart
+    function addItem(item) {
+        cart.push(item);
+        logMessage(`Item added: ${item}`);
+    }
+
+    // Function to remove an item from the cart
+    function removeItem(item) {
+        const index = cart.indexOf(item);
+        if (index > -1) {
+            cart.splice(index, 1);
+            logMessage(`Item removed: ${item}`);
+        } else {
+            logMessage(`Attempted to remove non-existent item: ${item}`);
+        }
+    }
+
+    // Function to view the current cart contents
+    function viewCart() {
+        logMessage(`Viewing cart: ${cart.length > 0 ? cart.join(', ') : 'Cart is empty'}`);
+    }
+
+    // Function to clear the cart
+    function clearCart() {
+        cart = [];
+        logMessage("Cart cleared");
+    }
+</script>
+
+</body>
+</html>
